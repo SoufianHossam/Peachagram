@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E378BFE294CF12E002F30DE /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFB294CF12E002F30DE /* NetworkClient.swift */; };
+		3E378BFF294CF12E002F30DE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFC294CF12E002F30DE /* Request.swift */; };
+		3E378C00294CF12E002F30DE /* NetworkConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFD294CF12E002F30DE /* NetworkConfigurations.swift */; };
 		3EE4513429483A90006C983A /* PeachagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4513329483A90006C983A /* PeachagramApp.swift */; };
 		3EE4513629483A90006C983A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4513529483A90006C983A /* ContentView.swift */; };
 		3EE4513829483A92006C983A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE4513729483A92006C983A /* Assets.xcassets */; };
@@ -14,6 +17,10 @@
 		3EE4514529483A92006C983A /* PeachagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4514429483A92006C983A /* PeachagramTests.swift */; };
 		3EE4514F29483A92006C983A /* PeachagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4514E29483A92006C983A /* PeachagramUITests.swift */; };
 		3EE4515129483A92006C983A /* PeachagramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4515029483A92006C983A /* PeachagramUITestsLaunchTests.swift */; };
+		3EE4515F294840BD006C983A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3EE4515E294840BD006C983A /* FirebaseDatabase */; };
+		3EE45161294840BD006C983A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3EE45160294840BD006C983A /* FirebaseFirestore */; };
+		3EE45163294840BD006C983A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3EE45162294840BD006C983A /* FirebaseStorage */; };
+		3EE4516529484345006C983A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EE4516429484345006C983A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E378BFB294CF12E002F30DE /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		3E378BFC294CF12E002F30DE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3E378BFD294CF12E002F30DE /* NetworkConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfigurations.swift; sourceTree = "<group>"; };
 		3EE4513029483A90006C983A /* Peachagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peachagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE4513329483A90006C983A /* PeachagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeachagramApp.swift; sourceTree = "<group>"; };
 		3EE4513529483A90006C983A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +54,7 @@
 		3EE4514A29483A92006C983A /* PeachagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeachagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE4514E29483A92006C983A /* PeachagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeachagramUITests.swift; sourceTree = "<group>"; };
 		3EE4515029483A92006C983A /* PeachagramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeachagramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3EE4516429484345006C983A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE4515F294840BD006C983A /* FirebaseDatabase in Frameworks */,
+				3EE45161294840BD006C983A /* FirebaseFirestore in Frameworks */,
+				3EE45163294840BD006C983A /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E378BFA294CF12E002F30DE /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				3E378BFB294CF12E002F30DE /* NetworkClient.swift */,
+				3E378BFC294CF12E002F30DE /* Request.swift */,
+				3E378BFD294CF12E002F30DE /* NetworkConfigurations.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		3EE4512729483A90006C983A = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +120,9 @@
 			children = (
 				3EE4513329483A90006C983A /* PeachagramApp.swift */,
 				3EE4513529483A90006C983A /* ContentView.swift */,
+				3EE4516429484345006C983A /* GoogleService-Info.plist */,
 				3EE4513729483A92006C983A /* Assets.xcassets */,
+				3E378BFA294CF12E002F30DE /* Infrastructure */,
 				3EE4513929483A92006C983A /* Preview Content */,
 			);
 			path = Peachagram;
@@ -143,6 +169,11 @@
 			dependencies = (
 			);
 			name = Peachagram;
+			packageProductDependencies = (
+				3EE4515E294840BD006C983A /* FirebaseDatabase */,
+				3EE45160294840BD006C983A /* FirebaseFirestore */,
+				3EE45162294840BD006C983A /* FirebaseStorage */,
+			);
 			productName = Peachagram;
 			productReference = 3EE4513029483A90006C983A /* Peachagram.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 3EE4512729483A90006C983A;
+			packageReferences = (
+				3EE4515D294840BD006C983A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3EE4513129483A90006C983A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +267,7 @@
 			files = (
 				3EE4513B29483A92006C983A /* Preview Assets.xcassets in Resources */,
 				3EE4513829483A92006C983A /* Assets.xcassets in Resources */,
+				3EE4516529484345006C983A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE4513629483A90006C983A /* ContentView.swift in Sources */,
+				3E378BFF294CF12E002F30DE /* Request.swift in Sources */,
 				3EE4513429483A90006C983A /* PeachagramApp.swift in Sources */,
+				3E378BFE294CF12E002F30DE /* NetworkClient.swift in Sources */,
+				3E378C00294CF12E002F30DE /* NetworkConfigurations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +615,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3EE4515D294840BD006C983A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3EE4515E294840BD006C983A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EE4515D294840BD006C983A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		3EE45160294840BD006C983A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EE4515D294840BD006C983A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3EE45162294840BD006C983A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EE4515D294840BD006C983A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3EE4512829483A90006C983A /* Project object */;
 }
