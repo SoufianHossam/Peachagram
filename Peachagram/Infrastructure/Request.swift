@@ -1,6 +1,6 @@
 //
 //  Request.swift
-//  CurrencyApp
+//  Peachagram
 //
 //  Created by Soufian Hossam on 03/12/2022.
 //
@@ -59,8 +59,6 @@ extension Request {
         }
         
         var urlRequest = URLRequest(url: url)
-
-        NetworkConfigurations.httpHeaders?.forEach { urlRequest.setValue($0.value, forHTTPHeaderField: $0.key) }
         
         urlRequest.httpMethod = method.rawValue
         urlRequest.cachePolicy = .reloadIgnoringCacheData

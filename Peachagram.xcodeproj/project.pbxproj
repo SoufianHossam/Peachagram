@@ -10,6 +10,19 @@
 		3E378BFE294CF12E002F30DE /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFB294CF12E002F30DE /* NetworkClient.swift */; };
 		3E378BFF294CF12E002F30DE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFC294CF12E002F30DE /* Request.swift */; };
 		3E378C00294CF12E002F30DE /* NetworkConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFD294CF12E002F30DE /* NetworkConfigurations.swift */; };
+		3E378C2A294CF4F9002F30DE /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C03294CF4F9002F30DE /* Endpoints.swift */; };
+		3E378C2C294CF4F9002F30DE /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C06294CF4F9002F30DE /* Date + Extensions.swift */; };
+		3E378C30294CF4F9002F30DE /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C0C294CF4F9002F30DE /* PostsRepository.swift */; };
+		3E378C31294CF4F9002F30DE /* PostsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C0F294CF4F9002F30DE /* PostsUseCaseProtocol.swift */; };
+		3E378C36294CF4F9002F30DE /* PostsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C17294CF4F9002F30DE /* PostsRepositoryProtocol.swift */; };
+		3E378C47294CF50B002F30DE /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C45294CF50B002F30DE /* AppConfigurations.swift */; };
+		3E378C48294CF50B002F30DE /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C46294CF50B002F30DE /* NetworkingManager.swift */; };
+		3E378C4B294CFC85002F30DE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C4A294CFC85002F30DE /* Post.swift */; };
+		3E378C4D294CFC8E002F30DE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C4C294CFC8E002F30DE /* User.swift */; };
+		3E378C4F294CFE35002F30DE /* Response DTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C4E294CFE35002F30DE /* Response DTOs.swift */; };
+		3E378C51294CFEC3002F30DE /* JSONDecoder + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C50294CFEC3002F30DE /* JSONDecoder + Extensions.swift */; };
+		3E378C53294CFF10002F30DE /* User + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C52294CFF10002F30DE /* User + Extensions.swift */; };
+		3E378C55294CFF3D002F30DE /* Post + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378C54294CFF3D002F30DE /* Post + Extensions.swift */; };
 		3EE4513429483A90006C983A /* PeachagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4513329483A90006C983A /* PeachagramApp.swift */; };
 		3EE4513629483A90006C983A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE4513529483A90006C983A /* ContentView.swift */; };
 		3EE4513829483A92006C983A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE4513729483A92006C983A /* Assets.xcassets */; };
@@ -44,6 +57,20 @@
 		3E378BFB294CF12E002F30DE /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3E378BFC294CF12E002F30DE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3E378BFD294CF12E002F30DE /* NetworkConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfigurations.swift; sourceTree = "<group>"; };
+		3E378C03294CF4F9002F30DE /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		3E378C06294CF4F9002F30DE /* Date + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
+		3E378C0C294CF4F9002F30DE /* PostsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
+		3E378C0F294CF4F9002F30DE /* PostsUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsUseCaseProtocol.swift; sourceTree = "<group>"; };
+		3E378C17294CF4F9002F30DE /* PostsRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		3E378C45294CF50B002F30DE /* AppConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
+		3E378C46294CF50B002F30DE /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		3E378C4A294CFC85002F30DE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3E378C4C294CFC8E002F30DE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E378C4E294CFE35002F30DE /* Response DTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response DTOs.swift"; sourceTree = "<group>"; };
+		3E378C50294CFEC3002F30DE /* JSONDecoder + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder + Extensions.swift"; sourceTree = "<group>"; };
+		3E378C52294CFF10002F30DE /* User + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User + Extensions.swift"; sourceTree = "<group>"; };
+		3E378C54294CFF3D002F30DE /* Post + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post + Extensions.swift"; sourceTree = "<group>"; };
+		3E378C56294D0063002F30DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EE4513029483A90006C983A /* Peachagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peachagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE4513329483A90006C983A /* PeachagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeachagramApp.swift; sourceTree = "<group>"; };
 		3EE4513529483A90006C983A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +122,137 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		3E378C01294CF4F9002F30DE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C02294CF4F9002F30DE /* Network */,
+				3E378C0B294CF4F9002F30DE /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3E378C02294CF4F9002F30DE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C03294CF4F9002F30DE /* Endpoints.swift */,
+				3E378C04294CF4F9002F30DE /* Extensions */,
+				3E378C07294CF4F9002F30DE /* DTOs */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3E378C04294CF4F9002F30DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C06294CF4F9002F30DE /* Date + Extensions.swift */,
+				3E378C50294CFEC3002F30DE /* JSONDecoder + Extensions.swift */,
+				3E378C52294CFF10002F30DE /* User + Extensions.swift */,
+				3E378C54294CFF3D002F30DE /* Post + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E378C07294CF4F9002F30DE /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C4E294CFE35002F30DE /* Response DTOs.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		3E378C0B294CF4F9002F30DE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C0C294CF4F9002F30DE /* PostsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3E378C0D294CF4F9002F30DE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C0E294CF4F9002F30DE /* UseCases */,
+				3E378C11294CF4F9002F30DE /* Entities */,
+				3E378C15294CF4F9002F30DE /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3E378C0E294CF4F9002F30DE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C0F294CF4F9002F30DE /* PostsUseCaseProtocol.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3E378C11294CF4F9002F30DE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C4A294CFC85002F30DE /* Post.swift */,
+				3E378C4C294CFC8E002F30DE /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3E378C15294CF4F9002F30DE /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C16294CF4F9002F30DE /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3E378C16294CF4F9002F30DE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C17294CF4F9002F30DE /* PostsRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3E378C18294CF4F9002F30DE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C19294CF4F9002F30DE /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3E378C19294CF4F9002F30DE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3E378C43294CF50B002F30DE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C44294CF50B002F30DE /* Managers */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3E378C44294CF50B002F30DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C45294CF50B002F30DE /* AppConfigurations.swift */,
+				3E378C46294CF50B002F30DE /* NetworkingManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3E378C49294CF6CE002F30DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E378C56294D0063002F30DE /* Info.plist */,
+				3EE4516429484345006C983A /* GoogleService-Info.plist */,
+				3EE4513729483A92006C983A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3EE4512729483A90006C983A = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +278,12 @@
 			children = (
 				3EE4513329483A90006C983A /* PeachagramApp.swift */,
 				3EE4513529483A90006C983A /* ContentView.swift */,
-				3EE4516429484345006C983A /* GoogleService-Info.plist */,
-				3EE4513729483A92006C983A /* Assets.xcassets */,
+				3E378C43294CF50B002F30DE /* Application */,
+				3E378C18294CF4F9002F30DE /* Presentation */,
+				3E378C0D294CF4F9002F30DE /* Domain */,
+				3E378C01294CF4F9002F30DE /* Data */,
 				3E378BFA294CF12E002F30DE /* Infrastructure */,
+				3E378C49294CF6CE002F30DE /* Resources */,
 				3EE4513929483A92006C983A /* Preview Content */,
 			);
 			path = Peachagram;
@@ -293,9 +454,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE4513629483A90006C983A /* ContentView.swift in Sources */,
+				3E378C31294CF4F9002F30DE /* PostsUseCaseProtocol.swift in Sources */,
 				3E378BFF294CF12E002F30DE /* Request.swift in Sources */,
 				3EE4513429483A90006C983A /* PeachagramApp.swift in Sources */,
+				3E378C51294CFEC3002F30DE /* JSONDecoder + Extensions.swift in Sources */,
+				3E378C47294CF50B002F30DE /* AppConfigurations.swift in Sources */,
+				3E378C4B294CFC85002F30DE /* Post.swift in Sources */,
+				3E378C30294CF4F9002F30DE /* PostsRepository.swift in Sources */,
+				3E378C4F294CFE35002F30DE /* Response DTOs.swift in Sources */,
+				3E378C36294CF4F9002F30DE /* PostsRepositoryProtocol.swift in Sources */,
+				3E378C4D294CFC8E002F30DE /* User.swift in Sources */,
+				3E378C48294CF50B002F30DE /* NetworkingManager.swift in Sources */,
+				3E378C2C294CF4F9002F30DE /* Date + Extensions.swift in Sources */,
 				3E378BFE294CF12E002F30DE /* NetworkClient.swift in Sources */,
+				3E378C53294CFF10002F30DE /* User + Extensions.swift in Sources */,
+				3E378C55294CFF3D002F30DE /* Post + Extensions.swift in Sources */,
+				3E378C2A294CF4F9002F30DE /* Endpoints.swift in Sources */,
 				3E378C00294CF12E002F30DE /* NetworkConfigurations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +624,7 @@
 		3EE4515529483A92006C983A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://firestore.googleapis.com/v1/projects/peach-assessment/databases/(default)/documents/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,6 +632,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Peachagram/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Peachagram/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +654,7 @@
 		3EE4515629483A92006C983A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://firestore.googleapis.com/v1/projects/peach-assessment/databases/(default)/documents/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +662,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Peachagram/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Peachagram/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

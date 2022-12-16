@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import FirebaseStorage
 
 struct ContentView: View {
+    @State var data: Data?
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Image(uiImage: data == nil ? UIImage() : UIImage(data: data!)!)
+            .resizable()
+            .onAppear() {
+                let storage = Storage.storage()
+                storage.reference().child("IR942k6vHX9HlvnZyqhB/5llHGnixjuwLK6b02Rt9").getData(maxSize: .max) { [self] data, error in
+                    self.data = data
+                }
+            }
     }
 }
 
