@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import Combine
 
 /// Feed Input & Output
-///
 typealias FeedViewModelType = FeedViewModelInput & FeedViewModelOutput
 
 /// Feed ViewModel Input
-///
-protocol FeedViewModelInput {}
+protocol FeedViewModelInput {
+    func fetchPosts()
+    func fetchUsers()
+}
 
 /// Feed ViewModel Output
-///
-protocol FeedViewModelOutput {}
+protocol FeedViewModelOutput {
+    var posts: AnyPublisher<[Post], Never> { get }
+}

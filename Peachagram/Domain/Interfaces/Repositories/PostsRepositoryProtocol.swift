@@ -8,6 +8,6 @@
 import Foundation
 
 protocol PostsRepositoryProtocol {
-    func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void)
-    func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void)
+    func fetchPosts() async throws -> [Post]
+    func fetchUsers() async throws -> [User]
 }

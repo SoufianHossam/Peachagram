@@ -8,50 +8,38 @@
 import Foundation
 
 protocol NetworkClientProtocol {
-    func request<T>(_ request: Request<T>, completion: @escaping (Result<T, NetworkError>) -> Void)
+    func request<T>(_ request: Request<T>) async throws -> T
 }
 
 struct NetworkClient: NetworkClientProtocol {
-    func request<T>(_ request: Request<T>, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    func request<T>(_ request: Request<T>) async throws -> T {
+        let urlRequest = try request.asURLRequest()
+        
         do {
-            let urlRequest = try request.asURLRequest()
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
             
-            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-                
-                if let error = error {
-                    let customError = resolve(error: error)
-                    completion(.failure(customError))
-                }
-                
-                guard let response = response as? HTTPURLResponse,
-                      (200...299).contains(response.statusCode) else {
-                    let error = handleErrorStatusCode(response)
-                    completion(.failure(error))
-                    return
-                }
-                
-                guard let data = data else {
-                    completion(.failure(.noData))
-                    return
-                }
-                
-                #if DEBUG
-                print(String(data: data, encoding: .utf8)!)
-                #endif
-                
-                do {
-                    let response = try request.parse(data)
-                    completion(.success(response))
-                    
-                } catch {
-                    completion(.failure(.parsing(error)))
-                }
+            guard let response = response as? HTTPURLResponse,
+                  (200...299).contains(response.statusCode) else {
+                throw handleErrorStatusCode(response)
             }
             
-            task.resume()
+            guard !data.isEmpty else {
+                throw NetworkError.noData
+            }
+            
+            #if DEBUG
+            print(String(data: data, encoding: .utf8)!)
+            #endif
+            
+            do {
+                return try request.parse(data)
+                
+            } catch {
+                throw NetworkError.parsing(error)
+            }
             
         } catch {
-            completion(.failure(.networkFailure(error.localizedDescription)))
+            throw resolve(error: error)
         }
     }
     
@@ -61,7 +49,7 @@ struct NetworkClient: NetworkClientProtocol {
         switch code {
         case .notConnectedToInternet:
             return .noInternetConnection
-        
+            
         default:
             return .networkFailure(error.localizedDescription)
         }
@@ -71,7 +59,7 @@ struct NetworkClient: NetworkClientProtocol {
         guard let response = response as? HTTPURLResponse else {
             return NetworkError.networkFailure("No Response")
         }
-
+        
         switch response.statusCode {
         case 400:
             return NetworkError.badRequest
@@ -87,7 +75,7 @@ struct NetworkClient: NetworkClientProtocol {
             
         case _ where response.statusCode >= 500:
             return NetworkError.serverError
-
+            
         default:
             return NetworkError.networkFailure("Unknown status code")
         }

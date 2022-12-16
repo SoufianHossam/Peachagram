@@ -11,11 +11,16 @@ import FirebaseStorage
 struct FeedView: View {
     @State var data: Data = Data()
 
-    let storage = Storage.storage()
+    private let viewModel: FeedViewModelType
+
+    init(viewModel: FeedViewModelType) {
+        self.viewModel = viewModel
+    }
     
-    init() {
+    func load() {
+        let storage = Storage.storage()
         storage.reference().child("IR942k6vHX9HlvnZyqhB/5llHGnixjuwLK6b02Rt9").getData(maxSize: .max) { [self] data, error in
-            DispatchQueue.main.async {self.data = data!}
+            self.data = data!
         }
     }
     
@@ -23,13 +28,13 @@ struct FeedView: View {
         Image(uiImage: UIImage(data: data) ?? UIImage())
             .resizable()
             .onAppear() {
-
+                
             }
     }
 }
 
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView()
+        FeedView(viewModel: FeedViewModel())
     }
 }

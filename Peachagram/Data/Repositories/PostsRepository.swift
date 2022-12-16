@@ -14,31 +14,15 @@ struct PostsRepository: PostsRepositoryProtocol {
         self.networkClient = networkClient
     }
     
-    func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
+    func fetchPosts() async throws -> [Post] {
         let request = Endpoints.posts()
-        
-        networkClient.request(request) { result in
-            switch result {
-            case .success(let value):
-                completion(.success(value.documents.map(Post.init)))
-            
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+        let response = try await networkClient.request(request)
+        return response.documents.map(Post.init)
     }
     
-    func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void) {
+    func fetchUsers() async throws -> [User] {
         let request = Endpoints.users()
-        
-        networkClient.request(request) { result in
-            switch result {
-            case .success(let value):
-                completion(.success(value.documents.map(User.init)))
-                
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+        let response = try await networkClient.request(request)
+        return response.documents.map(User.init)
     }
 }

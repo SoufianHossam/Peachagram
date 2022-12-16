@@ -8,8 +8,8 @@
 import Foundation
 
 protocol PostsUseCaseProtocol {
-    func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void)
-    func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void)
+    func fetchPosts() async throws -> [Post]
+    func fetchUsers() async throws -> [User]
 }
 
 struct PostsUseCase: PostsUseCaseProtocol {
@@ -19,11 +19,11 @@ struct PostsUseCase: PostsUseCaseProtocol {
         self.postsRepo = postsRepo
     }
     
-    func fetchPosts(completion: @escaping (Result<[Post], Error>) -> Void) {
-        postsRepo.fetchPosts(completion: completion)
+    func fetchPosts() async throws -> [Post] {
+        try await postsRepo.fetchPosts()
     }
     
-    func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void) {
-        postsRepo.fetchUsers(completion: completion)
+    func fetchUsers() async throws -> [User] {
+        try await postsRepo.fetchUsers()
     }
 }
