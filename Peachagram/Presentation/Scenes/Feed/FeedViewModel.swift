@@ -10,8 +10,7 @@ import Combine
 
 // MARK: FeedViewModel
 class FeedViewModel {
-    let useCase: PostsUseCaseProtocol
-    
+    private let useCase: PostsUseCaseProtocol
     private let _posts: CurrentValueSubject<[Post], Never> = .init([])
     
     init(_ useCase: PostsUseCaseProtocol = PostsUseCase()) {
@@ -22,6 +21,14 @@ class FeedViewModel {
 // MARK: FeedViewModelInput
 extension FeedViewModel: FeedViewModelInput {
     func fetchPosts() {
+        Task {
+            do {
+                _posts.send(try await useCase.fetchPosts())
+
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func fetchUsers() {

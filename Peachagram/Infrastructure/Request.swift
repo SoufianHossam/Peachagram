@@ -47,7 +47,7 @@ struct Request<Output: Decodable> {
 extension Request {
     init(path: String, method: HTTPMethod = .get, parameters: Parameters? = nil) {
         self.init(path: path, method: method, parameters: parameters) { data in
-            try JSONDecoder().decode(Output.self, from: data)
+            try JSONDecoder.defaultDecoder.decode(Output.self, from: data)
         }
     }
 }

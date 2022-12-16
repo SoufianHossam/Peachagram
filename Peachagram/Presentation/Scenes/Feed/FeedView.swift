@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 import FirebaseStorage
 
 struct FeedView: View {
     @State var data: Data = Data()
 
     private let viewModel: FeedViewModelType
+    private var anyCancellable = Set<AnyCancellable>()
 
     init(viewModel: FeedViewModelType) {
         self.viewModel = viewModel
+        
+        viewModel.fetchPosts()
+        viewModel.posts.sink { posts in
+            print("VALUES: \(posts)")
+        }
+        .store(in: &anyCancellable)
     }
     
     func load() {

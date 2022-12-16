@@ -44,4 +44,13 @@ struct Comments: Decodable {
 // MARK: - ArrayValue
 struct ArrayValue: Decodable {
     let values: [FieldValue]
+    
+    enum CodingKeys: String, CodingKey {
+        case values
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        values = try container.decodeIfPresent([FieldValue].self, forKey: .values) ?? []
+    }
 }
