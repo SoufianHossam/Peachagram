@@ -8,36 +8,37 @@
 import Foundation
 import Combine
 
-// MARK: FeedViewModel
-class FeedViewModel {
+@MainActor
+class FeedViewModel: ObservableObject {
     private let useCase: PostsUseCaseProtocol
-    private let _posts: CurrentValueSubject<[Post], Never> = .init([])
+    @Published var postsViewModels: [PostViewModel] = []
     
     init(_ useCase: PostsUseCaseProtocol = PostsUseCase()) {
         self.useCase = useCase
     }
 }
 
-// MARK: FeedViewModelInput
-extension FeedViewModel: FeedViewModelInput {
+extension FeedViewModel: FeedViewModelInput, FeedViewModelOutput {
     func fetchPosts() {
         Task {
             do {
-                _posts.send(try await useCase.fetchPosts())
-
+                let posts = try await useCase.fetchPosts()
+                let users = try await useCase.fetchUsers()
+                    
+                postsViewModels = posts.map { post in
+                    PostViewModel(
+                        mediaType: post.mediaType,
+                        comments: post.comments,
+                        userName: users.filter { $0.id == post.authorID }.first!.name,
+                        storageReference: post.storageReference,
+                        caption: post.caption,
+                        creationDate: post.creationDate.asString
+                    )
+                }
+                
             } catch {
                 print(error.localizedDescription)
             }
         }
-    }
-    
-    func fetchUsers() {
-    }
-}
-
-// MARK: FeedViewModelOutput
-extension FeedViewModel: FeedViewModelOutput {
-    var posts: AnyPublisher<[Post], Never> {
-        _posts.eraseToAnyPublisher()
     }
 }
