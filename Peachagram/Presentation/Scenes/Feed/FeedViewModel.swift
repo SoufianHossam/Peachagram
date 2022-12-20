@@ -37,6 +37,7 @@ extension FeedViewModel: FeedViewModelInput, FeedViewModelOutput {
                 }
                 
             } catch {
+                // We can use another Published variable to bind the error to the view
                 print(error.localizedDescription)
             }
         }

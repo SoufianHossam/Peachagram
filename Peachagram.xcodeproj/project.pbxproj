@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E14E9C729520469000A05E2 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E14E9C629520469000A05E2 /* PostView.swift */; };
 		3E378BFE294CF12E002F30DE /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFB294CF12E002F30DE /* NetworkClient.swift */; };
 		3E378BFF294CF12E002F30DE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFC294CF12E002F30DE /* Request.swift */; };
 		3E378C00294CF12E002F30DE /* NetworkConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E378BFD294CF12E002F30DE /* NetworkConfigurations.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E14E9C629520469000A05E2 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		3E378BFB294CF12E002F30DE /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3E378BFC294CF12E002F30DE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3E378BFD294CF12E002F30DE /* NetworkConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfigurations.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				3E378C57294D01D1002F30DE /* FeedView.swift */,
+				3E14E9C629520469000A05E2 /* PostView.swift */,
 				3E378C5C294D0AA5002F30DE /* FeedViewModel.swift */,
 				3E378C5A294D0AA5002F30DE /* FeedViewModelType.swift */,
 				3ED7BA0A294E22A9006E83DB /* FeedModels.swift */,
@@ -487,6 +490,7 @@
 				3E378C5D294D0AA5002F30DE /* FeedViewModelType.swift in Sources */,
 				3E378C4D294CFC8E002F30DE /* User.swift in Sources */,
 				3E378C48294CF50B002F30DE /* NetworkingManager.swift in Sources */,
+				3E14E9C729520469000A05E2 /* PostView.swift in Sources */,
 				3E378C2C294CF4F9002F30DE /* Date + Extensions.swift in Sources */,
 				3E378C5F294D0AA5002F30DE /* FeedViewModel.swift in Sources */,
 				3E378BFE294CF12E002F30DE /* NetworkClient.swift in Sources */,
