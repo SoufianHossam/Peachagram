@@ -12,7 +12,6 @@ import AVKit
 struct FeedView<ViewModel: FeedViewModelType>: View {
     @ObservedObject private var viewModel: ViewModel
     @State private var selectedItem: SelectedItem?
-    private let storageManager = StorageManager()
     
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
